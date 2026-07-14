@@ -1,0 +1,109 @@
+# =============================================================================
+# Organization-wide GitHub labels
+# =============================================================================
+#
+# These labels are synchronized across selected repositories in the
+# mcdc-project organization.
+#
+# Repository-specific labels should remain defined within each repository.
+# =============================================================================
+
+# Type ------------------------------------------------------------------------
+
+- name: "type: bug"
+  color: "d73a4a"
+  description: "Something is not working as intended."
+
+- name: "type: documentation"
+  color: "0075ca"
+  description: "Documentation additions or improvements."
+
+- name: "type: enhancement"
+  color: "a2eeef"
+  description: "Improvement to existing functionality."
+
+- name: "type: feature"
+  color: "0e8a16"
+  description: "New functionality or capability."
+
+- name: "type: maintenance"
+  color: "cfd3d7"
+  description: "Routine maintenance, cleanup, or dependency work."
+
+- name: "type: performance"
+  color: "5319e7"
+  description: "Performance improvement or investigation."
+
+- name: "type: refactor"
+  color: "d4c5f9"
+  description: "Internal restructuring without intended behavior changes."
+
+- name: "type: test"
+  color: "bfdadc"
+  description: "Test additions, corrections, or infrastructure."
+
+- name: "type: question"
+  color: "d876e3"
+  description: "A question requiring clarification or discussion."
+
+# Priority --------------------------------------------------------------------
+
+- name: "priority: critical"
+  color: "b60205"
+  description: "Requires immediate attention."
+
+- name: "priority: high"
+  color: "d93f0b"
+  description: "Important and should be addressed soon."
+
+- name: "priority: medium"
+  color: "fbca04"
+  description: "Normal priority."
+
+- name: "priority: low"
+  color: "c2e0c6"
+  description: "Can be addressed when time permits."
+
+# Status ----------------------------------------------------------------------
+
+- name: "status: blocked"
+  color: "b60205"
+  description: "Cannot proceed because of a dependency or unresolved problem."
+
+- name: "status: needs discussion"
+  color: "d876e3"
+  description: "Requires design, scope, or implementation discussion."
+
+- name: "status: needs information"
+  color: "fef2c0"
+  description: "Additional information is required."
+
+- name: "status: ready"
+  color: "0e8a16"
+  description: "Sufficiently defined and ready to be worked on."
+
+- name: "status: review needed"
+  color: "fbca04"
+  description: "Ready for review or maintainer feedback."
+
+- name: "status: stale"
+  color: "ededed"
+  description: "Has had no recent activity."
+
+# Contribution and compatibility ---------------------------------------------
+
+- name: "good first issue"
+  color: "7057ff"
+  description: "Suitable for a first contribution."
+
+- name: "help wanted"
+  color: "008672"
+  description: "Maintainers welcome assistance with this work."
+
+- name: "breaking change"
+  color: "b60205"
+  description: "Changes an existing public interface or expected behavior."
+
+- name: "decision needed"
+  color: "e99695"
+  description: "Requires a concrete maintainer or project decision."
