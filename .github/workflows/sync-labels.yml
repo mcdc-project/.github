@@ -1,15 +1,19 @@
-name: Sync organization labels
+# =============================================================================
+# Synchronize Organization Labels
+# =============================================================================
+#
+# Synchronizes the organization-wide label taxonomy across selected MC/DC
+# repositories.
+#
+# The label configuration in `.github/labels.yml` is the single source of truth.
+# Labels not listed in the configuration are automatically removed to maintain
+# a consistent, organization-managed taxonomy.
+#
+# Triggered automatically whenever the label configuration changes on `main`.
+# Can also be run manually from the Actions tab.
+# =============================================================================
 
-# =============================================================================
-# Synchronize the shared MC/DC label configuration across selected repositories.
-#
-# The workflow runs:
-#   - manually from the Actions tab;
-#   - whenever the shared label configuration changes on main.
-#
-# LABEL_SYNC_TOKEN must be a fine-grained personal access token with
-# Issues: read and write access to every target repository.
-# =============================================================================
+name: Sync organization labels
 
 on:
   push:
@@ -33,7 +37,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Synchronize shared labels
+      - name: Synchronize organization labels
         uses: srealmoreno/label-sync-action@v2
         with:
           token: ${{ secrets.LABEL_SYNC_TOKEN }}
@@ -44,5 +48,6 @@ jobs:
 
           config-file: .github/labels.yml
 
-          # Preserve/delete repository-specific labels that are not defined above.
-          clean-labels: false
+          # Treat labels.yml as the authoritative organization label taxonomy.
+          # Labels not listed in the configuration are automatically removed.
+          clean-labels: true

@@ -1,70 +1,22 @@
 # =============================================================================
-# Organization-wide GitHub labels
+# MC/DC Organization Labels
 # =============================================================================
 #
-# These labels are synchronized across selected repositories in the
-# mcdc-project organization.
+# Organization-wide labels synchronized across MC/DC repositories.
 #
-# Repository-specific labels should remain defined within each repository.
+# Labels are intentionally limited to:
+#   - contributor guidance;
+#   - automation;
+#   - special release information; and
+#   - technical domains not covered by GitHub Issue fields.
+#
+# Issue Type, Priority, Status, Milestone, and Assignee are managed through
+# GitHub Issues and Projects rather than labels.
 # =============================================================================
 
-# Type ------------------------------------------------------------------------
-
-- name: "type: bug"
-  color: "d73a4a"
-  description: "Something is not working as intended."
-
-- name: "type: documentation"
-  color: "0075ca"
-  description: "Documentation additions or improvements."
-
-- name: "type: enhancement"
-  color: "a2eeef"
-  description: "Improvement to existing functionality."
-
-- name: "type: feature"
-  color: "0e8a16"
-  description: "New functionality or capability."
-
-- name: "type: maintenance"
-  color: "cfd3d7"
-  description: "Routine maintenance, cleanup, or dependency work."
-
-- name: "type: performance"
-  color: "5319e7"
-  description: "Performance improvement or investigation."
-
-- name: "type: refactor"
-  color: "d4c5f9"
-  description: "Internal restructuring without intended behavior changes."
-
-- name: "type: test"
-  color: "bfdadc"
-  description: "Test additions, corrections, or infrastructure."
-
-- name: "type: question"
-  color: "d876e3"
-  description: "A question requiring clarification or discussion."
-
-# Priority --------------------------------------------------------------------
-
-- name: "priority: critical"
-  color: "b60205"
-  description: "Requires immediate attention."
-
-- name: "priority: high"
-  color: "d93f0b"
-  description: "Important and should be addressed soon."
-
-- name: "priority: medium"
-  color: "fbca04"
-  description: "Normal priority."
-
-- name: "priority: low"
-  color: "c2e0c6"
-  description: "Can be addressed when time permits."
-
-# Contribution ---------------------------------------------------------------
+# =============================================================================
+# Contribution
+# =============================================================================
 
 - name: "good first issue"
   color: "7057ff"
@@ -72,19 +24,152 @@
 
 - name: "help wanted"
   color: "008672"
-  description: "Maintainers welcome assistance with this work."
+  description: "Maintainers welcome community contributions."
 
-# Special --------------------------------------------------------------------
-
-- name: "breaking change"
-  color: "b60205"
-  description: "Changes an existing public interface or expected behavior."
-
-- name: "decision needed"
-  color: "e99695"
-  description: "Requires a concrete maintainer or project decision."
+# =============================================================================
+# Automation
+# =============================================================================
 
 - name: "stale"
   color: "ededed"
-  description: "Has had no recent activity."
+  description: "Issue has had no recent activity."
 
+# =============================================================================
+# Special
+# =============================================================================
+
+- name: "breaking change"
+  color: "b60205"
+  description: "Introduces an incompatible change."
+
+# =============================================================================
+# Physics & Transport
+# =============================================================================
+
+- name: "geometry"
+  color: "1d76db"
+  description: "Geometry and spatial modeling."
+
+- name: "materials"
+  color: "1d76db"
+  description: "Material definitions and nuclear data."
+
+- name: "sources"
+  color: "1d76db"
+  description: "Particle source modeling."
+
+- name: "tallies"
+  color: "1d76db"
+  description: "Scoring, tallies, and estimators."
+
+- name: "meshes"
+  color: "1d76db"
+  description: "Mesh generation and mesh-based capabilities."
+
+- name: "physics"
+  color: "1d76db"
+  description: "Transport physics and interaction models."
+
+- name: "variance reduction"
+  color: "5319e7"
+  description: "Variance reduction methods."
+
+- name: "multigroup"
+  color: "5319e7"
+  description: "Multi-group transport."
+
+- name: "continuous energy"
+  color: "5319e7"
+  description: "Continuous-energy transport."
+
+- name: "eigenvalue"
+  color: "5319e7"
+  description: "Eigenvalue calculations."
+
+- name: "transient"
+  color: "5319e7"
+  description: "Time-dependent transport."
+
+# =============================================================================
+# Particle Types
+# =============================================================================
+
+- name: "neutron"
+  color: "fbca04"
+  description: "Neutron transport."
+
+- name: "photon"
+  color: "fbca04"
+  description: "Photon transport."
+
+- name: "electron"
+  color: "fbca04"
+  description: "Electron transport."
+
+- name: "proton"
+  color: "fbca04"
+  description: "Proton transport."
+
+- name: "charged-particle"
+  color: "fbca04"
+  description: "Charged-particle transport."
+
+- name: "multi-particle"
+  color: "fbca04"
+  description: "Multi-particle transport and shared particle infrastructure."
+
+# =============================================================================
+# Computing
+# =============================================================================
+
+- name: "cpu"
+  color: "0e8a16"
+  description: "CPU execution."
+
+- name: "gpu"
+  color: "0e8a16"
+  description: "GPU execution."
+
+- name: "mpi"
+  color: "0e8a16"
+  description: "Distributed-memory parallelism."
+
+- name: "numba"
+  color: "0e8a16"
+  description: "Numba compilation and execution."
+
+# =============================================================================
+# Infrastructure
+# =============================================================================
+
+- name: "io"
+  color: "cfd3d7"
+  description: "Input/output."
+
+- name: "ci"
+  color: "cfd3d7"
+  description: "Continuous integration."
+
+- name: "build"
+  color: "cfd3d7"
+  description: "Build system and installation."
+
+- name: "packaging"
+  color: "cfd3d7"
+  description: "Packaging and distribution."
+
+# =============================================================================
+# Documentation & Examples
+# =============================================================================
+
+- name: "documentation"
+  color: "0075ca"
+  description: "Documentation."
+
+- name: "examples"
+  color: "0075ca"
+  description: "Examples and tutorials."
+
+- name: "testing"
+  color: "0075ca"
+  description: "Testing infrastructure and test suites."
