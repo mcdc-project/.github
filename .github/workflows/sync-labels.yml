@@ -44,5 +44,5 @@ jobs:
 
           config-file: .github/labels.yml
 
-          # Preserve repository-specific labels that are not defined above.
+          # Preserve/delete repository-specific labels that are not defined above.
           clean-labels: false
