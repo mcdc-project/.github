@@ -1,0 +1,48 @@
+name: Sync organization labels
+
+# =============================================================================
+# Synchronize the shared MC/DC label configuration across selected repositories.
+#
+# The workflow runs:
+#   - manually from the Actions tab;
+#   - whenever the shared label configuration changes on main.
+#
+# LABEL_SYNC_TOKEN must be a fine-grained personal access token with
+# Issues: read and write access to every target repository.
+# =============================================================================
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/labels.yml"
+      - ".github/workflows/sync-labels.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync-labels:
+    name: Synchronize labels
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Synchronize shared labels
+        uses: srealmoreno/label-sync-action@v2
+        with:
+          token: ${{ secrets.LABEL_SYNC_TOKEN }}
+
+          repositories: |
+            mcdc-project/mcdc
+            mcdc-project/mcdc-vvp
+
+          config-file: .github/labels.yml
+
+          # Preserve repository-specific labels that are not defined above.
+          clean-labels: false
